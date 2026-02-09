@@ -13,8 +13,8 @@ Bar TestConvert();
 Bar TestConvert()
 {
 
-	Bar var = 99;////  error
-	return  99;  ////  error
+	Bar var = Bar(99);////  error
+	return  Bar(99);  ////  error
 }
 
 int main()
@@ -27,11 +27,11 @@ int main()
 
 	//Bar obj1(1); // перетворення типу int в тип Bar за рахунок конструктора Bar( int data);
 	//
-	/////TestConvert(8);///  not explicite, implicite
+	//TestConvert(8);///  not explicite, implicite
 
 
-	//TestConvert(Bar(8));/// explicit Bar( int data)   не пропустить, очікується об'єкт Bar
-	//TestConvert(Foo(8));
+	TestConvert(Bar(8));/// explicit Bar( int data)   не пропустить, очікується об'єкт Bar
+	TestConvert(Foo(8));
 
 
 	///////2. explicit змушує використовувати більш безпечні явні перетворення
